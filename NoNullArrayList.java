@@ -1,29 +1,30 @@
-public class NoNullArrayList<T> extends Arraylist<T> {
+import java.util.ArrayList;
+public class NoNullArrayList<T> extends ArrayList<T> {
   public NoNullArrayList(){
     super();
   }
-  public NoNullArrayList(startingCapacity){
+  public NoNullArrayList(int startingCapacity){
     super(startingCapacity);
   }
   public boolean add(T t){
     if (t == null){
       throw new IllegalArgumentException("Value cannot be null");
     }else{
-      super.add(t);
+      return(super.add(t));
     }
   }
-  public void add(int index, T element){
+  public void add(int index, T t){
     if (t == null){
       throw new IllegalArgumentException("Value cannot be null");
     }else{
       super.add(index, t);
     }
   }
-  public void set(T t){
+  public T set(int index, T t){
     if (t == null){
       throw new IllegalArgumentException("Value cannot be null");
     }else{
-      super.set(t);
+      return(super.set(index, t));
     }
   }
 }
