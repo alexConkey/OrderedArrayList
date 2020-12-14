@@ -1,9 +1,9 @@
 public class NoNullArrayList<T> extends Arraylist<T> {
   public NoNullArrayList(){
-
+    super();
   }
   public NoNullArrayList(startingCapacity){
-
+    super(startingCapacity);
   }
   public boolean add(T t){
     if (t == null){
